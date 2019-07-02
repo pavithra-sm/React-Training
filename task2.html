@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+input[type=text], input[type=password]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-left: 43em;
+    margin-top: 26em;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+    padding: 17px;
+    width: 14em;
+    margin-left: 11em;
+}
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  padding-top: 60px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 12% auto 15% auto;
+    border: 1px solid #888;
+    width: 37em;
+}
+.c {
+margin-top: 0em;
+margin-left: 0em;
+}
+.b{
+margin-top: 0em;
+margin-left: 0em;
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+ 
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;margin-top:5em">Welcome to our page</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign up</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+
+    <div class="container">
+      <label for="fname"><b>Firstname</b></label>
+      <input type="text" placeholder="Enter Firstname" name="fname" required>
+      <label for="lname"><b>Lastname</b></label>
+      <input type="text" placeholder="Enter Lastname" name="lname" required>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <button class="c" type="submit">Submit</button>
+     
+    </div>
+   </form>
+</div>
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate">
+
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+      <button class="b" type="submit">Submit</button>
+     
+    </div>
+   </form>
+</div>
+<script>
+
+var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
+
